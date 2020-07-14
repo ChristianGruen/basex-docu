@@ -27,7 +27,7 @@ declare variable $C:MASTER-ALL := "basex-full-documentation.xml";
 declare variable $C:NO-RENDER-DEL-ATTR := ("xml", "html", "docbook");
 
 (:~ URI to WIKI :)
-declare variable $C:WIKI-BASEURL := "http://docs.basex.org";
+declare variable $C:WIKI-BASEURL := "https://docs.basex.org";
 
 (:~ URI to MediaWiki API :)
 declare variable $C:BX-API := $C:WIKI-BASEURL || "/api.php?";

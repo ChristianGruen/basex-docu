@@ -20,7 +20,7 @@ let $pdf := $C:TMP || "BaseX" || C:bx-version() ! fn:replace(.,'\.','') || ".pdf
 return (
   C:execute("java", (
     (: compare with ./fop/fop :)
-    "-Xmx2g",
+    "-Xmx4g",
     "-Djava.awt.headless=true",
     "-classpath", $classpath,
     "org.apache.fop.cli.Main",

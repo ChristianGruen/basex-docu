@@ -35,7 +35,7 @@ let $archive  := (
     file:write-binary($zip-file, fetch:binary($dep("url"))),
     C:log(static-base-uri(), "downloaded: " || $zip-file)
   ),
-  stream:materialize(file:read-binary($zip-file))
+  lazy:cache(file:read-binary($zip-file))
 )
 let $entries  := archive:entries($archive)
 let $contents := archive:extract-binary($archive)
