@@ -11,15 +11,15 @@ file:create-dir($C:TMP),
 (: all sources and their path/name where they shall end up :)
 let $deps := (
   map {
-    "url" : "http://files.basex.org/etc/basex-docu/docbook-xsl-ns-1.79.1.zip",
+    "url" : "https://files.basex.org/etc/basex-docu/docbook-xsl-ns-1.79.1.zip",
     "name" : "docbook"
   },
   map {
-    "url" : "http://files.basex.org/etc/basex-docu/fop-2.1-bin.zip",
+    "url" : "https://files.basex.org/etc/basex-docu/fop-2.1-bin.zip",
     "name" : "fop"
   },
   map {
-    "url" : "http://files.basex.org/etc/basex-docu/herold-6.1.0-188.zip",
+    "url" : "https://files.basex.org/etc/basex-docu/herold-6.1.0-188.zip",
     "name" : "herold"
   }
 )

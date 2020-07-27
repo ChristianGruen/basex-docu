@@ -71,7 +71,7 @@ declare function C:execute(
   $args as xs:string*
 ) {
   let $res := proc:execute($cmd, $args)
-  where $res/code != 0
+  where $res/code != 0 or $res/error
   return ($cmd || " yields an error " || out:nl(), $res)
 };
 
