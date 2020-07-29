@@ -13,7 +13,14 @@ return (
   (: delete table of contents :)
   delete node $doc//div[@id = "toc"],
   (: delete magifying lense -- put on images :)
-  delete node $doc//div[@class = "magnify"]
+  delete node $doc//div[@class = "magnify"],
+  (: insert separators between multi-line code blocks:)
+  for $br in $doc//br
+  where $br/preceding-sibling::node()[1][self::code]
+  return replace node $br with ', ',
+  (: remove syntax markup in code examples :)
+  for $pre in $doc//pre
+  return replace node $pre with element pre { string($pre) }
 ),
 
 C:log(static-base-uri(), "modified html of all wiki pages")
